@@ -51,3 +51,9 @@ Backend/AI Models: (Optional if integrated with Python/Flask API for NLP)
 Deployment: Lovable.dev (instant hosting), GitHub integration
 
 Version Control: Git & GitHub
+
+👥 **Team**  
+| Role        | Name                                |
+|-------------|-------------------------------------|
+| Team Leader | Patibandla Jaini Sai                |
+| Member      | Reddy Venkata Sai Sidhardha         |
