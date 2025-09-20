@@ -2,9 +2,11 @@ import { useState } from "react";
 import Header from "@/components/layout/Header";
 import StatsCard from "@/components/dashboard/StatsCard";
 import RecentEvaluations from "@/components/dashboard/RecentEvaluations";
+import AnalyticsCharts from "@/components/dashboard/AnalyticsCharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { 
   Users, 
   FileText, 
@@ -13,7 +15,9 @@ import {
   Plus,
   ArrowUpRight,
   MapPin,
-  Calendar
+  Calendar,
+  BarChart3,
+  TrendingUp
 } from "lucide-react";
 
 const Dashboard = () => {
@@ -85,73 +89,93 @@ const Dashboard = () => {
           </div>
         </section>
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Recent Evaluations */}
-          <div className="lg:col-span-2">
-            <RecentEvaluations />
-          </div>
+        {/* Tabbed Content */}
+        <Tabs defaultValue="overview" className="space-y-6">
+          <TabsList className="grid w-full grid-cols-2 lg:w-[400px]">
+            <TabsTrigger value="overview" className="flex items-center space-x-2">
+              <BarChart3 className="h-4 w-4" />
+              <span>Overview</span>
+            </TabsTrigger>
+            <TabsTrigger value="analytics" className="flex items-center space-x-2">
+              <TrendingUp className="h-4 w-4" />
+              <span>Analytics</span>
+            </TabsTrigger>
+          </TabsList>
 
-          {/* Location Stats */}
-          <div className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <MapPin className="h-5 w-5" />
-                  <span>Location Performance</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {locationStats.map((location) => (
-                    <div key={location.name} className="flex items-center justify-between">
-                      <div>
-                        <h4 className="font-medium">{location.name}</h4>
-                        <p className="text-sm text-muted-foreground">
-                          {location.applications} applications
-                        </p>
-                      </div>
-                      <Badge variant="secondary" className="font-semibold">
-                        {location.rate}
-                      </Badge>
+          <TabsContent value="overview" className="space-y-6">
+            {/* Main Content Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Recent Evaluations */}
+              <div className="lg:col-span-2">
+                <RecentEvaluations />
+              </div>
+
+              {/* Location Stats */}
+              <div className="space-y-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center space-x-2">
+                      <MapPin className="h-5 w-5" />
+                      <span>Location Performance</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      {locationStats.map((location) => (
+                        <div key={location.name} className="flex items-center justify-between">
+                          <div>
+                            <h4 className="font-medium">{location.name}</h4>
+                            <p className="text-sm text-muted-foreground">
+                              {location.applications} applications
+                            </p>
+                          </div>
+                          <Badge variant="secondary" className="font-semibold">
+                            {location.rate}
+                          </Badge>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                  </CardContent>
+                </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <Calendar className="h-5 w-5" />
-                  <span>Weekly Summary</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm">High Suitability</span>
-                    <span className="font-semibold text-success">312 candidates</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm">Medium Suitability</span>
-                    <span className="font-semibold text-warning">567 candidates</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm">Low Suitability</span>
-                    <span className="font-semibold text-muted-foreground">368 candidates</span>
-                  </div>
-                  <div className="pt-2 border-t">
-                    <Button variant="outline" size="sm" className="w-full">
-                      <ArrowUpRight className="h-4 w-4 mr-2" />
-                      View Detailed Report
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center space-x-2">
+                      <Calendar className="h-5 w-5" />
+                      <span>Weekly Summary</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm">High Suitability</span>
+                        <span className="font-semibold text-success">312 candidates</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm">Medium Suitability</span>
+                        <span className="font-semibold text-warning">567 candidates</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm">Low Suitability</span>
+                        <span className="font-semibold text-muted-foreground">368 candidates</span>
+                      </div>
+                      <div className="pt-2 border-t">
+                        <Button variant="outline" size="sm" className="w-full">
+                          <ArrowUpRight className="h-4 w-4 mr-2" />
+                          View Detailed Report
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="analytics" className="space-y-6">
+            <AnalyticsCharts />
+          </TabsContent>
+        </Tabs>
       </main>
     </div>
   );
