@@ -74,4 +74,4 @@ Version Control: Git & GitHub
 |-------------|-------------------------------------|
 | Team Leader | Patibandla Jaini Sai                |
 | Member      | Reddy Venkata Sai Sidhardha         |
-| member      | Reddy Venkata Sai Tharun            |
+| Member      | Reddy Venkata Sai Tharun            |
