@@ -1,5 +1,7 @@
 Automated Resume Relevance Check System
 
+Project info 
+URL: https://lovable.dev/projects/23619c6e-9d16-4a4d-8fad-e00b8daddcf8
 
 📌 Project Overview
 
