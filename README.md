@@ -1,73 +1,53 @@
-# Welcome to your Lovable project
+📌 Project Overview
 
-## Project info
+Automated Resume Relevance Check System is a web application that leverages AI and NLP models to automatically check how relevant a candidate’s resume is for a given job description.
 
-**URL**: https://lovable.dev/projects/23619c6e-9d16-4a4d-8fad-e00b8daddcf8
+Recruiters can upload job descriptions.
 
-## How can I edit this code?
+Candidates can upload their resumes.
 
-There are several ways of editing your application.
+The system calculates a relevance score and highlights important matching / missing skills.
 
-**Use Lovable**
+Provides an easy-to-use dashboard for recruiters and candidates.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/23619c6e-9d16-4a4d-8fad-e00b8daddcf8) and start prompting.
+📁 Project Structure (example based on React/Vite repo)
+relevance-pilot/
+├── src/
+│   ├── components/       # UI Components (Team, Navbar, etc.)
+│   ├── pages/            # Page-level components
+│   ├── App.tsx           # Main App entry
+│   ├── main.tsx          # React + Vite entry point
+│   └── index.css         # Global styles (Tailwind)
+├── public/               # Static assets
+├── package.json          # Dependencies & scripts
+├── tsconfig.json         # TypeScript config
+├── vite.config.ts        # Vite config
+└── README.md             # Documentation
 
-Changes made via Lovable will be committed automatically to this repo.
+🚀 Features
 
-**Use your preferred IDE**
+📂 Resume Upload – Upload resumes in PDF/DOC format
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+📝 Job Description Input – Recruiters provide the JD text
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+📊 Relevance Score – AI calculates % match between JD and resume
 
-Follow these steps:
+🔍 Keyword Highlighting – Shows missing or extra skills
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+⚡ Instant Feedback – Fast scoring powered by NLP/ML models
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🎨 Modern UI – Clean responsive design using Tailwind + shadcn-ui
 
-# Step 3: Install the necessary dependencies.
-npm i
+🌐 Web-based – No installation needed, works in browser
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+🛠 Tech Stack
 
-**Edit a file directly in GitHub**
+Frontend: React, TypeScript, Vite
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+UI Frameworks: Tailwind CSS, shadcn-ui
 
-**Use GitHub Codespaces**
+Backend/AI Models: (Optional if integrated with Python/Flask API for NLP)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Deployment: Lovable.dev (instant hosting), GitHub integration
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/23619c6e-9d16-4a4d-8fad-e00b8daddcf8) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Version Control: Git & GitHub
