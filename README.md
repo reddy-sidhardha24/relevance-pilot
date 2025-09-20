@@ -13,19 +13,21 @@ The system calculates a relevance score and highlights important matching / miss
 
 Provides an easy-to-use dashboard for recruiters and candidates.
 
-📁 Project Structure (example based on React/Vite repo)
+📁 Project Structure 
+
 relevance-pilot/
 ├── src/
-│   ├── components/       # UI Components (Team, Navbar, etc.)
-│   ├── pages/            # Page-level components
-│   ├── App.tsx           # Main App entry
-│   ├── main.tsx          # React + Vite entry point
-│   └── index.css         # Global styles (Tailwind)
-├── public/               # Static assets
-├── package.json          # Dependencies & scripts
-├── tsconfig.json         # TypeScript config
-├── vite.config.ts        # Vite config
-└── README.md             # Documentation
+│   ├── components/        # UI Components (Team, Navbar, etc.)
+│   ├── pages/             # Page-level components
+│   ├── App.tsx            # Main App entry
+│   ├── main.tsx           # React + Vite entry point
+│   └── index.css           # Global styles (Tailwind)
+├── public/                # Static assets
+├── package.json           # Dependencies & scripts
+├── tsconfig.json          # TypeScript config
+├── vite.config.ts         # Vite config
+└── README.md              # Documentation
+
 
 🚀 Features
 
