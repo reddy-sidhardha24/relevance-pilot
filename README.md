@@ -1,4 +1,6 @@
 Automated Resume Relevance Check System
+
+
 📌 Project Overview
 
 Automated Resume Relevance Check System is a web application that leverages AI and NLP models to automatically check how relevant a candidate’s resume is for a given job description.
